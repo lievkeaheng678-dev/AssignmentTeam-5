@@ -10,7 +10,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ---------------------------------------------------------------- Core
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-only-insecure-key-change-me")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "assignment5team.vercel.app").split(",")
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    "assignment5team.vercel.app",
+    "localhost",
+    "127.0.0.1",
+]
+
 CSRF_TRUSTED_ORIGINS = [
     "https://assignment5team.vercel.app",
 ]
